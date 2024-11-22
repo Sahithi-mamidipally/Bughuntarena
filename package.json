@@ -2,6 +2,9 @@
   "name": "auth0-react-sample",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": "16.x"
+  },
   "scripts": {
     "start": "npm-run-all --parallel spa api-server",
     "build": "react-scripts build",
@@ -15,6 +18,8 @@
     "dev": "npm-run-all --parallel spa api-server:dev",
     "prod": "npm-run-all --parallel server api-server"
   },
+  
+
   "dependencies": {
     "@auth0/auth0-react": "^2.2.4",
     "@babel/core": "^7.23",
@@ -52,6 +57,7 @@
     "jest-fetch-mock": "^3.0",
     "nodemon": "^2.0"
   },
+  
   "eslintConfig": {
     "extends": "react-app"
   },
