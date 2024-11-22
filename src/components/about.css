@@ -1,0 +1,43 @@
+.about-page {
+    padding: 20px;
+    color: white;
+  }
+  
+  .project-details {
+    margin-top: 20px;
+    background-color: #1c1c1c;
+    border: 2px solid red;
+    padding: 20px;
+    
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  .contact-link {
+    color: red; /* Blue color for the link */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold;
+  }
+  
+  .contact-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .team-section {
+    margin-top: 30px;
+    background-color: #1c1c1c;
+    border: 2px solid red;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  

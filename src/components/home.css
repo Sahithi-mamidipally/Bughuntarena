@@ -1,0 +1,78 @@
+/* General Container */
+.home-container {
+  display: flex;
+  justify-content: center;
+  
+  align-items: center;
+  min-height: 100vh; /* Ensures the container spans the full height of the viewport */
+  background-color: #333; /* Dark background */
+  color: #fff; /* White text */
+  text-align: center;
+
+}
+
+/* Hero Section */
+.hero-content {
+  max-width: 600px;
+  padding: 20px;
+}
+
+.hero-logo {
+  width: 120px;
+  margin-bottom: 20px;
+  border-radius: 50%; /* Circular logo */
+  background-color: transparent;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.highlight-text {
+  color: rgb(192, 5, 5); /* Highlighted text color */
+}
+
+.hero-description {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Buttons */
+.hero-buttons .btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin: 0 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary {
+  background-color: rgb(192, 5, 5);
+
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: #ff4c4c;
+  transform: scale(1.05);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-secondary:hover {
+  background-color: #fff;
+  color: #000;
+  transform: scale(1.05);
+}

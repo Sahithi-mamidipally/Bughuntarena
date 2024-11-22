@@ -1,0 +1,50 @@
+/* General Styling */
+.challenges-container {
+    background-color: #000; /* Dark background */
+    color: #fff; /* White text */
+    padding: 20px;
+    min-height: 100vh; /* Full height of the viewport */
+  }
+  
+  .challenges-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* Challenge List */
+  .challenges-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 0 20px;
+  }
+  
+  /* Challenge Card */
+  .challenge-card {
+    background-color: #222; /* Slightly lighter than the background */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+  }
+  
+  .challenge-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ff4c4c; /* Highlighted text color */
+    margin-bottom: 10px;
+  }
+  
+  .challenge-description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd; /* Slightly lighter text for readability */
+  }
+  
