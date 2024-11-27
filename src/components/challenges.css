@@ -1,50 +1,105 @@
-/* General Styling */
+/* Container Styling */
 .challenges-container {
-    background-color: #000; /* Dark background */
-    color: #fff; /* White text */
-    padding: 20px;
-    min-height: 100vh; /* Full height of the viewport */
-  }
+  padding: 20px;
+  background-color: #000; /* Black background for contrast */
+  color: #fff; /* White text for better readability */
+}
+
+/* Title Styling */
+.challenges-title {
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Challenge Group Styling */
+.challenge-group {
+  margin-bottom: 20px; /* Spacing between groups */
+}
+
+.challenge-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: #222; /* Dark background for group header */
+  border: 1px solid #444; /* Subtle border for header */
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.challenge-group-header:hover {
+  background-color: #333; /* Slightly lighter on hover */
+}
+
+/* Group Title Styling */
+.challenge-group-title {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.challenge-group-description {
+  font-size: 0.9em;
+  color: #bbb; /* Subtle gray for descriptions */
+}
+
+/* Dropdown Icon Styling */
+.dropdown-icon {
+  font-size: 1.2em;
+  color: #fff; /* Ensure it is visible */
+}
+
+/* Challenge Dropdown Styling */
+.challenge-dropdown {
+  padding: 10px 15px;
+  border-left: 2px solid #444;
+  margin-top: 10px;
+  transition: max-height 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+/* Individual Challenge Card Styling */
+.challenge-card {
+  padding: 10px;
+  background-color: #333; /* Darker background for challenge items */
+  border: 1px solid #444; /* Subtle border for dropdown items */
+  border-radius: 5px;
+  margin-bottom: 10px; /* Spacing between dropdown items */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.challenge-card:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+/* Challenge Link Styling */
+.challenge-link {
+  text-decoration: none;
+  color: #fff; /* White text for better visibility */
+}
+
+.challenge-link:hover {
+  /*text-decoration: underline;*/
+  color: #f1f0f0;
   
-  .challenges-title {
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  
-  /* Challenge List */
-  .challenges-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 0 20px;
-  }
-  
-  /* Challenge Card */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .challenge-card {
-    background-color: #222; /* Slightly lighter than the background */
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-size: 14px;
+    padding: 8px;
   }
-  
-  .challenge-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+
+  .challenge-group-header {
+    flex-direction: column;
+    align-items: flex-start;
   }
-  
-  .challenge-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #ff4c4c; /* Highlighted text color */
-    margin-bottom: 10px;
+
+  .dropdown-icon {
+    margin-top: 10px;
   }
-  
-  .challenge-description {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #ddd; /* Slightly lighter text for readability */
-  }
-  
+}

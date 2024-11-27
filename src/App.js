@@ -7,7 +7,7 @@ import {
 } from "react-router-dom"; // Updated imports
 import { Container } from "reactstrap";
 import { useAuth0 } from "@auth0/auth0-react";
-import Challenges from "./components/challenges"; // Adjust the path if needed
+// Adjust the path if needed
 
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
@@ -18,6 +18,9 @@ import ExternalApi from "./views/ExternalApi";
 import Features from "./components/features";
 import About from "./components/about";
 import Dashboard from "./components/dashboard";
+import Challenges from "./components/challenges";
+import VulnerabilityChallenges from "./components/Vulnerability/vulnerabilitychallenges";
+import Challenge1 from "./components/Vulnerability/challenge1"; // Import Challenge 1
 
 // styles
 import "./App.css";
@@ -54,7 +57,31 @@ const App = () => {
                 isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />
               }
             />
-            <Route path="/challenges" element={<Challenges />} />
+            {/*<Route path="/challenges" element={<Challenges />} />*/}
+            <Route
+              path="/challenges"
+              element={
+                isAuthenticated ? <Challenges /> : <Navigate to="/" replace />
+              }
+            />
+            {/* Protected route for Vulnerability Challenges */}
+            <Route
+              path="/vulnerability-challenges"
+              element={
+                isAuthenticated ? (
+                  <VulnerabilityChallenges />
+                ) : (
+                  <Navigate to="/" replace />
+                )
+              }
+            />
+            {/* Add a nested route for Challenge 1 */}
+            <Route
+              path="/vulnerability-challenges/1"
+              element={
+                isAuthenticated ? <Challenge1 /> : <Navigate to="/" replace />
+              }
+            />
             <Route path="/" element={<Home />} />
           </Routes>
         </Container>
