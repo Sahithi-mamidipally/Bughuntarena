@@ -1,0 +1,70 @@
+.resources-container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+  }
+  
+  .resources-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #f8f3f3;
+    font-size: 28px; /* Increased font size for the main title */
+  }
+  
+  .resources-container p {
+    text-align: center;
+    color: #b80e0e;
+    font-size: 18px; /* Increased font size for the subtitle */
+  }
+  
+  .resources-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .resource-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    width: 350px; /* Increased card width for better layout */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .resource-card:hover {
+    transform: translateY(-5px); /* Added hover effect for interactivity */
+  }
+  
+  .resource-card h2 {
+    font-size: 22px; /* Increased font size for resource titles */
+    margin-bottom: 10px;
+    color: #b91919;
+  }
+  
+  .resource-card p {
+    font-size: 18px; /* Increased font size for resource descriptions */
+    margin-bottom: 15px;
+    color: #050505;
+    line-height: 1.5; /* Improved line spacing for better readability */
+  }
+  
+  .learn-more-button {
+    background-color: #f2f2f2;
+    color: rgb(200, 11, 11);
+    padding: 12px 20px; /* Adjusted padding for better appearance */
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px; /* Increased font size for the button */
+    text-align: center;
+    border: 1px solid #be0e0e;
+  }
+  
+  .learn-more-button:hover {
+    background-color: #a2100b;
+    color: #fff;
+    border: 1px solid #fff; /* Enhanced hover effect */
+  }
+  

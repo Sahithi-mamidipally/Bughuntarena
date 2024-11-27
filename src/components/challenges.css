@@ -2,7 +2,7 @@
 .challenges-container {
   padding: 20px;
   background-color: #000; /* Black background for contrast */
-  color: #fff; /* White text for better readability */
+  color: #c80606; /* White text for better readability */
 }
 
 /* Title Styling */
@@ -48,7 +48,7 @@
 /* Dropdown Icon Styling */
 .dropdown-icon {
   font-size: 1.2em;
-  color: #fff; /* Ensure it is visible */
+  color: #ffffff; /* Ensure it is visible */
 }
 
 /* Challenge Dropdown Styling */
@@ -101,5 +101,6 @@
 
   .dropdown-icon {
     margin-top: 10px;
+    
   }
 }

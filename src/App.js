@@ -21,6 +21,8 @@ import Dashboard from "./components/dashboard";
 import Challenges from "./components/challenges";
 import VulnerabilityChallenges from "./components/Vulnerability/vulnerabilitychallenges";
 import Challenge1 from "./components/Vulnerability/challenge1"; // Import Challenge 1
+/*import ReactCodeEditorApp from "./components/Compiler/react-code-editor-app/src/App"; // Import React code editor app*/
+import Resources from "./components/resource"; // Import Resources Page
 
 // styles
 import "./App.css";
@@ -75,6 +77,19 @@ const App = () => {
                 )
               }
             />
+
+            {/* Redirect Challenge 1 directly to the code editor app */}
+            {/*<Route
+              path="/vulnerability-challenges/1"
+              element={
+                isAuthenticated ? (
+                  <ReactCodeEditorApp />
+                ) : (
+                  <Navigate to="/" replace />
+                )
+              }
+            />*/}
+
             {/* Add a nested route for Challenge 1 */}
             <Route
               path="/vulnerability-challenges/1"
@@ -82,6 +97,15 @@ const App = () => {
                 isAuthenticated ? <Challenge1 /> : <Navigate to="/" replace />
               }
             />
+
+            {/* Resources Route */}
+            <Route
+              path="/resources"
+              element={
+                isAuthenticated ? <Resources /> : <Navigate to="/" replace />
+              }
+            />
+
             <Route path="/" element={<Home />} />
           </Routes>
         </Container>
