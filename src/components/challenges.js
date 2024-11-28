@@ -5,7 +5,7 @@ import "./challenges.css";
 const Challenges = () => {
   const challengeGroups = [
     {
-      group: "Bug Bounty Programs",
+      group: "Box Breakers",
       description:
         "Participate in real-world bug bounty simulations and earn rewards.",
       challenges: [
