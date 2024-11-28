@@ -4,7 +4,7 @@ import "./features.css"; // Add a separate CSS file for styling
 const Features = () => {
   const features = [
     {
-      title: "BUG BOUNTY PROBLEMS",
+      title: "BOX BREAKER CHALLENGES",
       description:
         "Test your skills by solving real-world bug bounty scenarios to identify and exploit vulnerabilities.",
     },
