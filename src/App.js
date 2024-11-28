@@ -10,7 +10,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 // Adjust the path if needed
 
 import NavBar from "./components/NavBar";
-import Footer from "./components/Footer";
+
 import Home from "./views/Home";
 import Loading from "./components/Loading";
 import Profile from "./views/Profile";
@@ -109,7 +109,6 @@ const App = () => {
             <Route path="/" element={<Home />} />
           </Routes>
         </Container>
-        <Footer />
       </div>
     </Router>
   );
