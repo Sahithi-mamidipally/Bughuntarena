@@ -107,7 +107,7 @@ const NavBar = () => {
                       Features
                     </NavLink>
                   </NavItem>
-                  <NavItem>
+                  {/*<NavItem>
                     <NavLink
                       tag={RouterNavLink}
                       to="/leaderboard"
@@ -116,7 +116,7 @@ const NavBar = () => {
                     >
                       Leaderboard
                     </NavLink>
-                  </NavItem>
+                  </NavItem>*/}
                   <NavItem>
                     <NavLink
                       tag={RouterNavLink}
