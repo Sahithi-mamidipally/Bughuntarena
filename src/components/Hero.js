@@ -67,12 +67,12 @@ const Hero = () => {
     <div className="hero-container">
       <div className="hero-content">
         <h1 className="hero-title">
-          WELCOME TO <br></br>
-          <span className="highlight-text">CYBER WORLD!</span>
+          Welcome To <br></br>
+          <span className="highlight-text">BugHunt Arena!</span>
         </h1>
         <p className="hero-description">
-          A user-friendly learning platform. Come let's solve complex challenges
-          together.
+          where you can hunt for vulnerabilities and bugs in the code and solve
+          boxes.
         </p>
         <div className="hero-buttons">
           <button
