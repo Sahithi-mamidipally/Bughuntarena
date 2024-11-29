@@ -24,7 +24,7 @@ const Dashboard = () => {
                 <div className="col-12 col-md-6">
                   <button
                     className="btn btn-outline-secondary w-100 py-3"
-                    onClick={() => (window.location.href = "/learning-path")}
+                    onClick={() => navigate("/challenges")}
                   >
                     Explore Learning Path
                   </button>
