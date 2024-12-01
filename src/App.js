@@ -17,6 +17,7 @@ import Profile from "./views/Profile";
 import ExternalApi from "./views/ExternalApi";
 import Features from "./components/features";
 import About from "./components/about";
+import DetailChallange from "./components/detail-challenge"
 import Dashboard from "./components/dashboard";
 import Challenges from "./components/challenges";
 import VulnerabilityChallenges from "./components/Vulnerability/vulnerabilitychallenges";
@@ -60,12 +61,20 @@ const App = () => {
               }
             />
             {/*<Route path="/challenges" element={<Challenges />} />*/}
-            <Route
-              path="/challenges"
-              element={
-                isAuthenticated ? <Challenges /> : <Navigate to="/" replace />
-              }
-            />
+            <Route path="/challenges">
+              <Route
+                index
+                element={
+                  isAuthenticated ? <Challenges /> : <Navigate to="/" replace />
+                }
+              />
+              <Route
+                path="detail/:id"
+                element={
+                  isAuthenticated ? <DetailChallange /> : <Navigate to="/" replace />
+                }
+              />
+            </Route>
             {/* Protected route for Vulnerability Challenges */}
             <Route
               path="/vulnerability-challenges"

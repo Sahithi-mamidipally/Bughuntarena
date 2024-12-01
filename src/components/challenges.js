@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./challenges.css";
 
 const Challenges = () => {
@@ -9,8 +9,8 @@ const Challenges = () => {
       description:
         "Participate in real-world bug bounty simulations and earn rewards.",
       challenges: [
-        { title: "Bug Bounty 1", link: "/bug-bounty/1" },
-        { title: "Bug Bounty 2", link: "/bug-bounty/2" },
+        { title: "Red Trails", link: "/challenges/detail/1",  },
+        { title: "ReMeeting the Wheel", link: "/challenges/detail/2", },
       ],
     },
     {
@@ -28,24 +28,7 @@ const Challenges = () => {
         },
       ],
     },
-    {
-      group: "Interactive Labs",
-      description:
-        "Practice on live virtual machines and solve Capture the Flag (CTF) challenges.",
-      challenges: [
-        { title: "Interactive Lab 1", link: "/interactive-labs/1" },
-        { title: "Interactive Lab 2", link: "/interactive-labs/2" },
-      ],
-    },
-    {
-      group: "Code Auditing",
-      description:
-        "Analyze code snippets for security flaws and improve your secure coding skills.",
-      challenges: [
-        { title: "Code Audit 1", link: "/code-auditing/1" },
-        { title: "Code Audit 2", link: "/code-auditing/2" },
-      ],
-    },
+    
   ];
 
   const [expandedGroup, setExpandedGroup] = useState(null);
@@ -91,6 +74,7 @@ const Challenges = () => {
           </div>
         ))}
       </div>
+      <Outlet/>
     </div>
   );
 };

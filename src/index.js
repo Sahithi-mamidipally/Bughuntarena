@@ -23,6 +23,8 @@ const providerConfig = {
   onRedirectCallback,
   authorizationParams: {
     redirect_uri: window.location.origin,
+    cacheLocation: 'localstorage',
+    useRefreshTokens: true,
     ...(config.audience ? { audience: config.audience } : null),
   },
 };

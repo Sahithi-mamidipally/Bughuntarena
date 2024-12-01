@@ -32,6 +32,10 @@ const NavBar = () => {
       },
     });
 
+    const handleUpgrade = () => {
+      window.location.href = "https://buy.stripe.com/test_7sIbMnasJ0h92oE289";
+    };
+
   return (
     <div className="nav-container">
       <Navbar
@@ -88,6 +92,7 @@ const NavBar = () => {
                       onClick={() =>
                         loginWithRedirect({
                           screen_hint: "signup", // Redirect to the signup page
+                          max_age: 10000,
                         })
                       }
                     >
@@ -135,6 +140,15 @@ const NavBar = () => {
                       activeClassName="router-link-exact-active"
                     >
                       Resources
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      tag={RouterNavLink}
+                      onClick={handleUpgrade}
+                      activeClassName="router-link-exact-active"
+                    >
+                      Upgrade to Premium
                     </NavLink>
                   </NavItem>
                 </>

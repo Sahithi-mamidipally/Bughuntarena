@@ -13,6 +13,11 @@
   margin-bottom: 20px;
 }
 
+.challenge-list{
+  display: flex;
+  flex-direction: column;
+}
+
 /* Challenge Group Styling */
 .challenge-group {
   margin-bottom: 20px; /* Spacing between groups */
