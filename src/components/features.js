@@ -12,17 +12,7 @@ const Features = () => {
       title: "VULNERABILITY CHALLENGES",
       description:
         "Learn and practice with targeted challenges focusing on specific vulnerabilities and techniques.",
-    },
-    {
-      title: "INTERACTIVE LABS",
-      description:
-        "Engage in hands-on labs that simulate real-world environments for better understanding.",
-    },
-    {
-      title: "CODING AUDITS",
-      description:
-        "Improve your code quality and security with guided audits and best practices.",
-    },
+    }
   ];
 
   return (
