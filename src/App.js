@@ -21,12 +21,7 @@ import Challenges from "./components/challenges";
 import VulnerabilityChallenges from "./components/Vulnerability/vulnerabilitychallenges";
 import Challenge1 from "./components/Vulnerability/challenge1";
 import Resources from "./components/resource";
-<<<<<<< Updated upstream
-import CodeCompilerPage from "./views/CodeCompilerPage";
-=======
 import CodeCompilerPage from "./views/CodeCompilerPage"; // Import the new CodeCompilerPage
->>>>>>> Stashed changes
-
 // styles
 import "./App.css";
 
