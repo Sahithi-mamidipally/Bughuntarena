@@ -51,9 +51,10 @@ const NavBar = () => {
             style={{ display: "flex", alignItems: "center" }}
           >
             <img
-              src="https://github.com/Sahithi-mamidipally/CyberEscape_UI/blob/main/CER/logo.jpeg?raw=true"
+              src="/files/logo.png"
               alt="Logo"
               width="60"
+              height="60"
               style={{
                 marginRight: "10px",
                 borderRadius: "50%",

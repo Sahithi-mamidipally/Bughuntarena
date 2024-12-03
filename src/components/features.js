@@ -6,7 +6,7 @@ const Features = () => {
     {
       title: "BOX BREAKER CHALLENGES",
       description:
-        "Test your skills by solving real-world bug bounty scenarios to identify and exploit vulnerabilities.",
+        "Test your skills by solving real-world scenarios to identify vulnerabilities and find flags.",
     },
     {
       title: "VULNERABILITY CHALLENGES",
