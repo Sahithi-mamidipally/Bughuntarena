@@ -61,7 +61,7 @@ const About = () => {
           </li>
           <div className="contact-us mt-5 text-center">
             <p>If you have any questions, feel free to reach out to us:</p>
-            <a href="mailto:CyberEscapeRoom@yahoo.com" className="contact-link">
+            <a href="mailto:bughuntarena@yahoo.com" className="contact-link">
               Contact Us
             </a>
           </div>

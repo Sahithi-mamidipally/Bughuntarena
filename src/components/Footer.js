@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "./logo.jpeg"; // Update this path to match your logo's location
+import logo from "./logo.png"; // Update this path to match your logo's location
 
 const Footer = () => (
   <footer className="bg-light p-3 text-center">
