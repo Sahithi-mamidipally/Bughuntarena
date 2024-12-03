@@ -91,7 +91,7 @@ const NavBar = () => {
                       href="#"
                       onClick={() =>
                         loginWithRedirect({
-                          screen_hint: "signup", // Redirect to the signup page
+                          screen_hint: "signup",
                           max_age: 10000,
                         })
                       }
@@ -112,16 +112,6 @@ const NavBar = () => {
                       Features
                     </NavLink>
                   </NavItem>
-                  {/*<NavItem>
-                    <NavLink
-                      tag={RouterNavLink}
-                      to="/leaderboard"
-                      exact
-                      activeClassName="router-link-exact-active"
-                    >
-                      Leaderboard
-                    </NavLink>
-                  </NavItem>*/}
                   <NavItem>
                     <NavLink
                       tag={RouterNavLink}
@@ -140,6 +130,16 @@ const NavBar = () => {
                       activeClassName="router-link-exact-active"
                     >
                       Resources
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      tag={RouterNavLink}
+                      to="/code-compiler"
+                      exact
+                      activeClassName="router-link-exact-active"
+                    >
+                      Code Compiler
                     </NavLink>
                   </NavItem>
                   <NavItem>

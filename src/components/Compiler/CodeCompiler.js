@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Editor from "@monaco-editor/react";
+import { Play } from 'lucide-react';
 
 const CodeCompiler = () => {
   const [code, setCode] = useState(`// JavaScript Example
@@ -107,7 +108,8 @@ if (number % 2 === 0) {
               backdropFilter: 'blur(8px)'
             }}
           >
-            {isLoading ? 'Running...' : 'Run Code ►'}
+            <Play className="w-5 h-5" />
+            {isLoading ? 'Running...' : 'Run Code'}
           </button>
         </div>
 
