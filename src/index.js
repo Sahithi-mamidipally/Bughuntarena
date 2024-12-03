@@ -13,8 +13,6 @@ const onRedirectCallback = (appState) => {
   );
 };
 
-// Please see https://auth0.github.io/auth0-react/interfaces/Auth0ProviderOptions.html
-// for a full list of the available properties on the provider
 const config = getConfig();
 
 const providerConfig = {
@@ -23,10 +21,12 @@ const providerConfig = {
   onRedirectCallback,
   authorizationParams: {
     redirect_uri: window.location.origin,
-    cacheLocation: 'localstorage',
-    useRefreshTokens: true,
-    ...(config.audience ? { audience: config.audience } : null),
+    audience: config.audience,
   },
+  // Add these properties to persist the session
+  useRefreshTokens: true,
+  cacheLocation: "localstorage",
+  persistanceMethod: "local",
 };
 
 const root = createRoot(document.getElementById('root'));
@@ -38,7 +38,4 @@ root.render(
   </Auth0Provider>,
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
