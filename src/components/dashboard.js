@@ -2,6 +2,7 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import { Card, CardHeader, CardTitle, CardContent } from "./ui/cards";
 import { useNavigate } from "react-router-dom";
+
 const Dashboard = () => {
   const { user } = useAuth0();
   const navigate = useNavigate();
