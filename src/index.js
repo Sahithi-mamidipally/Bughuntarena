@@ -1,5 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
+import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
@@ -23,19 +24,17 @@ const providerConfig = {
     redirect_uri: window.location.origin,
     audience: config.audience,
   },
-  // Add these properties to persist the session
   useRefreshTokens: true,
   cacheLocation: "localstorage",
-  persistanceMethod: "local",
 };
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <Auth0Provider
-    {...providerConfig}
-  >
-    <App />
-  </Auth0Provider>,
+  <React.StrictMode>
+    <Auth0Provider {...providerConfig}>
+      <App />
+    </Auth0Provider>
+  </React.StrictMode>
 );
 
 serviceWorker.unregister();

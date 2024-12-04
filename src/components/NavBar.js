@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink as RouterNavLink } from "react-router-dom";
+import { NavLink as RouterNavLink, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -23,18 +23,29 @@ import { useAuth0 } from "@auth0/auth0-react";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  const navigate = useNavigate();
   const toggle = () => setIsOpen(!isOpen);
 
-  const logoutWithRedirect = () =>
+  const logoutWithRedirect = () => {
+    // Clear any cached data
+    sessionStorage.clear();
+    localStorage.clear();
+    
+    // Force reload and clear history state
     logout({
       logoutParams: {
         returnTo: window.location.origin,
       },
+      onRedirect: () => {
+        window.location.reload();
+        navigate('/', { replace: true });
+      }
     });
+  };
 
-    const handleUpgrade = () => {
-      window.location.href = "https://buy.stripe.com/test_7sIbMnasJ0h92oE289";
-    };
+  const handleUpgrade = () => {
+    window.location.href = "https://buy.stripe.com/test_7sIbMnasJ0h92oE289";
+  };
 
   return (
     <div className="nav-container">

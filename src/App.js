@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -20,14 +20,14 @@ import Dashboard from "./components/dashboard";
 import Challenges from "./components/challenges";
 import VulnerabilityChallenges from "./components/Vulnerability/vulnerabilitychallenges";
 import Challenge1 from "./components/Vulnerability/challenge1";
-import Challenge2 from "./components/Vulnerability/challenge2"; // Import Challenge2
+import Challenge2 from "./components/Vulnerability/challenge2";
 import Resources from "./components/resource";
 import CodeCompilerPage from "./views/CodeCompilerPage";
 
-// styles
+// Import styles
 import "./App.css";
 
-// fontawesome
+// Initialize FontAwesome
 import initFontAwesome from "./utils/initFontAwesome";
 initFontAwesome();
 
@@ -35,6 +35,7 @@ const App = () => {
   const { isLoading, error, isAuthenticated } = useAuth0();
 
   if (error) {
+    console.error("Auth0 Error:", error);
     return <div>Oops... {error.message}</div>;
   }
 
@@ -48,65 +49,51 @@ const App = () => {
         <NavBar />
         <Container className="flex-grow-1 mt-5">
           <Routes>
+            <Route path="/" element={<Home />} />
             <Route path="/features" element={<Features />} />
             <Route path="/about" element={<About />} />
-            <Route path="/profile" element={<Profile />} />
-            <Route path="/external-api" element={<ExternalApi />} />
+            <Route 
+              path="/profile" 
+              element={isAuthenticated ? <Profile /> : <Navigate to="/" replace />} 
+            />
+            <Route 
+              path="/external-api" 
+              element={isAuthenticated ? <ExternalApi /> : <Navigate to="/" replace />} 
+            />
             <Route
               path="/dashboard"
-              element={
-                isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />
-              }
+              element={isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />}
             />
             <Route path="/challenges">
               <Route
                 index
-                element={
-                  isAuthenticated ? <Challenges /> : <Navigate to="/" replace />
-                }
+                element={isAuthenticated ? <Challenges /> : <Navigate to="/" replace />}
               />
               <Route
                 path="detail/:id"
-                element={
-                  isAuthenticated ? <DetailChallange /> : <Navigate to="/" replace />
-                }
+                element={isAuthenticated ? <DetailChallange /> : <Navigate to="/" replace />}
               />
             </Route>
             <Route
               path="/vulnerability-challenges"
-              element={
-                isAuthenticated ? (
-                  <VulnerabilityChallenges />
-                ) : (
-                  <Navigate to="/" replace />
-                )
-              }
+              element={isAuthenticated ? <VulnerabilityChallenges /> : <Navigate to="/" replace />}
             />
             <Route
               path="/vulnerability-challenges/1"
-              element={
-                isAuthenticated ? <Challenge1 /> : <Navigate to="/" replace />
-              }
+              element={isAuthenticated ? <Challenge1 /> : <Navigate to="/" replace />}
             />
             <Route
               path="/vulnerability-challenges/2"
-              element={
-                isAuthenticated ? <Challenge2 /> : <Navigate to="/" replace />
-              }
+              element={isAuthenticated ? <Challenge2 /> : <Navigate to="/" replace />}
             />
             <Route
               path="/resources"
-              element={
-                isAuthenticated ? <Resources /> : <Navigate to="/" replace />
-              }
+              element={isAuthenticated ? <Resources /> : <Navigate to="/" replace />}
             />
             <Route
               path="/code-compiler"
-              element={
-                isAuthenticated ? <CodeCompilerPage /> : <Navigate to="/" replace />
-              }
+              element={isAuthenticated ? <CodeCompilerPage /> : <Navigate to="/" replace />}
             />
-            <Route path="/" element={<Home />} />
           </Routes>
         </Container>
       </div>
