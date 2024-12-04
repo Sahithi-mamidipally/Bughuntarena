@@ -23,6 +23,10 @@ import Challenge1 from "./components/Vulnerability/challenge1";
 import Challenge2 from "./components/Vulnerability/challenge2";
 import Resources from "./components/resource";
 import CodeCompilerPage from "./views/CodeCompilerPage";
+import ExploreLearningPath from "./components/ExploreLearningPath";
+import DetailLearningPath from "./components/detail-learning-path";
+import VulnerabilityLearning from "./components/Vulnerability/vulnerabilitylearning";
+import LearningPath1 from "./components/Vulnerability/learning-path-1";
 
 // Import styles
 import "./App.css";
@@ -52,13 +56,13 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/features" element={<Features />} />
             <Route path="/about" element={<About />} />
-            <Route 
-              path="/profile" 
-              element={isAuthenticated ? <Profile /> : <Navigate to="/" replace />} 
+            <Route
+              path="/profile"
+              element={isAuthenticated ? <Profile /> : <Navigate to="/" replace />}
             />
-            <Route 
-              path="/external-api" 
-              element={isAuthenticated ? <ExternalApi /> : <Navigate to="/" replace />} 
+            <Route
+              path="/external-api"
+              element={isAuthenticated ? <ExternalApi /> : <Navigate to="/" replace />}
             />
             <Route
               path="/dashboard"
@@ -74,9 +78,40 @@ const App = () => {
                 element={isAuthenticated ? <DetailChallange /> : <Navigate to="/" replace />}
               />
             </Route>
+
+            <Route path="/learning-path">
+              <Route
+                index
+                element={
+                  isAuthenticated ? <ExploreLearningPath /> : <Navigate to="/" replace />
+                }
+              />
+              <Route
+                path="detail/:id"
+                element={
+                  isAuthenticated ? <DetailLearningPath /> : <Navigate to="/" replace />
+                }
+              />
+            </Route>
             <Route
               path="/vulnerability-challenges"
               element={isAuthenticated ? <VulnerabilityChallenges /> : <Navigate to="/" replace />}
+            />
+            <Route
+              path="/vulnerability-learning"
+              element={
+                isAuthenticated ? (
+                  <VulnerabilityLearning />
+                ) : (
+                  <Navigate to="/" replace />
+                )
+              }
+            />
+            <Route
+              path="/vulnerability-learning/1"
+              element={
+                isAuthenticated ? <LearningPath1 /> : <Navigate to="/" replace />
+              }
             />
             <Route
               path="/vulnerability-challenges/1"

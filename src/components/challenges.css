@@ -68,7 +68,7 @@
 /* Individual Challenge Card Styling */
 .challenge-card {
   padding: 10px;
-  background-color: #333; /* Darker background for challenge items */
+  background-color: #222; /* Darker background for challenge items */
   border: 1px solid #444; /* Subtle border for dropdown items */
   border-radius: 5px;
   margin-bottom: 10px; /* Spacing between dropdown items */
