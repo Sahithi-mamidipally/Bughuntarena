@@ -20,8 +20,10 @@ import Dashboard from "./components/dashboard";
 import Challenges from "./components/challenges";
 import VulnerabilityChallenges from "./components/Vulnerability/vulnerabilitychallenges";
 import Challenge1 from "./components/Vulnerability/challenge1";
+import Challenge2 from "./components/Vulnerability/challenge2";
 import Resources from "./components/resource";
-import CodeCompilerPage from "./views/CodeCompilerPage"; // Import the new CodeCompilerPage
+import CodeCompilerPage from "./views/CodeCompilerPage";
+
 // styles
 import "./App.css";
 
@@ -87,12 +89,17 @@ const App = () => {
               }
             />
             <Route
+              path="/vulnerability-challenges/2"
+              element={
+                isAuthenticated ? <Challenge2 /> : <Navigate to="/" replace />
+              }
+            />
+            <Route
               path="/resources"
               element={
                 isAuthenticated ? <Resources /> : <Navigate to="/" replace />
               }
             />
-            {/* Add the new Code Compiler route */}
             <Route
               path="/code-compiler"
               element={
