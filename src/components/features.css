@@ -14,8 +14,8 @@
   
   .feature-box {
     background-color: #1c1c1c; /* Dark background for boxes */
-    color: red; /* Red text for feature title */
-    border: 2px solid red; /* Optional border for emphasis */
+    color: #c80606; /* Red text for feature title */
+    border: 2px solid #c80606; /* Optional border for emphasis */
     border-radius: 10px;
     padding: 20px;
     width: 300px; /* Fixed width for each box */

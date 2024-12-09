@@ -50,10 +50,8 @@ const NavBar = () => {
   return (
     <div className="nav-container">
       <Navbar
-        color="dark"
-        dark
         expand="md"
-        style={{ backgroundColor: "#333" }}
+        style={{ backgroundColor: "#000000" }}
         container={false}
       >
         <Container className="d-flex align-items-center">
@@ -82,6 +80,7 @@ const NavBar = () => {
                   to="/"
                   exact
                   activeClassName="router-link-exact-active"
+                  style={{ color: "white" }}
                 >
                   Home
                 </NavLink>
@@ -94,6 +93,7 @@ const NavBar = () => {
                       to="/features"
                       exact
                       activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
                     >
                       Features
                     </NavLink>
@@ -107,6 +107,7 @@ const NavBar = () => {
                           max_age: 10000,
                         })
                       }
+                      style={{ color: "white" }}
                     >
                       Create Account
                     </NavLink>
@@ -120,6 +121,7 @@ const NavBar = () => {
                       to="/features"
                       exact
                       activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
                     >
                       Features
                     </NavLink>
@@ -130,8 +132,20 @@ const NavBar = () => {
                       to="/challenges"
                       exact
                       activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
                     >
                       Challenges
+                    </NavLink>
+                  </NavItem>
+                  <NavItem>
+                    <NavLink
+                      tag={RouterNavLink}
+                      to="/learning-path"
+                      exact
+                      activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
+                    >
+                      Learning Path
                     </NavLink>
                   </NavItem>
                   <NavItem>
@@ -140,6 +154,7 @@ const NavBar = () => {
                       to="/resources"
                       exact
                       activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
                     >
                       Resources
                     </NavLink>
@@ -150,6 +165,7 @@ const NavBar = () => {
                       to="/code-compiler"
                       exact
                       activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
                     >
                       Code Compiler
                     </NavLink>
@@ -159,6 +175,7 @@ const NavBar = () => {
                       tag={RouterNavLink}
                       onClick={handleUpgrade}
                       activeClassName="router-link-exact-active"
+                      style={{ color: "white" }}
                     >
                       Upgrade to Premium
                     </NavLink>

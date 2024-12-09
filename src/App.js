@@ -24,6 +24,10 @@ import Challenge1 from "./components/Vulnerability/challenge1";
 import Challenge2 from "./components/Vulnerability/challenge2";
 import Resources from "./components/resource";
 import CodeCompilerPage from "./views/CodeCompilerPage";
+import ExploreLearningPath from "./components/ExploreLearningPath";
+import DetailLearningPath from "./components/detail-learning-path";
+import VulnerabilityLearning from "./components/Vulnerability/vulnerabilitylearning";
+import LearningPath1 from "./components/Vulnerability/learning-path-1";
 
 import "./App.css";
 import initFontAwesome from "./utils/initFontAwesome";
@@ -58,70 +62,59 @@ const AppContent = () => {
   }
 
   return (
-    <div id="app" className="d-flex flex-column h-100">
-      <NavBar />
-      <Container className="flex-grow-1 mt-5">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/callback" element={<Callback />} />
-          <Route path="/features" element={<Features />} />
-          <Route path="/about" element={<About />} />
-          <Route 
-            path="/profile" 
-            element={isAuthenticated ? <Profile /> : <Navigate to="/" replace />} 
-          />
-          <Route 
-            path="/external-api" 
-            element={isAuthenticated ? <ExternalApi /> : <Navigate to="/" replace />} 
-          />
-          <Route
-            path="/dashboard"
-            element={isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />}
-          />
-          <Route path="/challenges">
-            <Route
-              index
-              element={isAuthenticated ? <Challenges /> : <Navigate to="/" replace />}
-            />
-            <Route
-              path="detail/:id"
-              element={isAuthenticated ? <DetailChallange /> : <Navigate to="/" replace />}
-            />
-          </Route>
-          <Route
-            path="/vulnerability-challenges"
-            element={isAuthenticated ? <VulnerabilityChallenges /> : <Navigate to="/" replace />}
-          />
-          <Route
-            path="/vulnerability-challenges/1"
-            element={isAuthenticated ? <Challenge1 /> : <Navigate to="/" replace />}
-          />
-          <Route
-            path="/vulnerability-challenges/2"
-            element={isAuthenticated ? <Challenge2 /> : <Navigate to="/" replace />}
-          />
-          <Route
-            path="/resources"
-            element={isAuthenticated ? <Resources /> : <Navigate to="/" replace />}
-          />
-          <Route
-            path="/code-compiler"
-            element={isAuthenticated ? <CodeCompilerPage /> : <Navigate to="/" replace />}
-          />
-          {/* Add a catch-all route */}
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </Container>
-    </div>
-  );
-};
-
-const App = () => {
-  return (
     <Router>
-      <Auth0ProviderWithConfig>
-        <AppContent />
-      </Auth0ProviderWithConfig>
+      <div id="app" className="d-flex flex-column h-100">
+        <NavBar />
+        <Container className="flex-grow-1 mt-5">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/features" element={<Features />} />
+            <Route path="/about" element={<About />} />
+            <Route 
+              path="/profile" 
+              element={isAuthenticated ? <Profile /> : <Navigate to="/" replace />} 
+            />
+            <Route 
+              path="/external-api" 
+              element={isAuthenticated ? <ExternalApi /> : <Navigate to="/" replace />} 
+            />
+            <Route
+              path="/dashboard"
+              element={isAuthenticated ? <Dashboard /> : <Navigate to="/" replace />}
+            />
+            <Route path="/challenges">
+              <Route
+                index
+                element={isAuthenticated ? <Challenges /> : <Navigate to="/" replace />}
+              />
+              <Route
+                path="detail/:id"
+                element={isAuthenticated ? <DetailChallange /> : <Navigate to="/" replace />}
+              />
+            </Route>
+            <Route
+              path="/vulnerability-challenges"
+              element={isAuthenticated ? <VulnerabilityChallenges /> : <Navigate to="/" replace />}
+            />
+            <Route
+              path="/vulnerability-challenges/1"
+              element={isAuthenticated ? <Challenge1 /> : <Navigate to="/" replace />}
+            />
+            <Route
+              path="/vulnerability-challenges/2"
+              element={isAuthenticated ? <Challenge2 /> : <Navigate to="/" replace />}
+            />
+            <Route
+              path="/resources"
+              element={isAuthenticated ? <Resources /> : <Navigate to="/" replace />}
+            />
+            <Route
+              path="/code-compiler"
+              element={isAuthenticated ? <CodeCompilerPage /> : <Navigate to="/" replace />}
+            />
+          </Routes>
+        </Container>
+      </div>
     </Router>
   );
 };

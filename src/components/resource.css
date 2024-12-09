@@ -25,7 +25,7 @@
   }
   
   .resource-card {
-    background-color: #fff;
+    background-color: black;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -47,13 +47,13 @@
   .resource-card p {
     font-size: 18px; /* Increased font size for resource descriptions */
     margin-bottom: 15px;
-    color: #050505;
+    color: white;
     line-height: 1.5; /* Improved line spacing for better readability */
   }
   
   .learn-more-button {
-    background-color: #f2f2f2;
-    color: rgb(200, 11, 11);
+    background-color: black;
+    color: white;
     padding: 12px 20px; /* Adjusted padding for better appearance */
     border-radius: 10px;
     cursor: pointer;
