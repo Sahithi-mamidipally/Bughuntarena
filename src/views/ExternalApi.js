@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import { Button, Alert } from "reactstrap";
 import Highlight from "../components/Highlight";
 import { useAuth0, withAuthenticationRequired } from "@auth0/auth0-react";
-import { getConfig } from "../config";
+import config from "../auth_config.json";
 import Loading from "../components/Loading";
 
 export const ExternalApiComponent = () => {
-  const { apiOrigin = "http://localhost:3001", audience } = getConfig();
+  const apiOrigin = process.env.REACT_APP_API_URL || "http://localhost:3001";
+  const { audience } = config;
 
   const [state, setState] = useState({
     showResult: false,
